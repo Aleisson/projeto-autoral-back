@@ -6,9 +6,7 @@ async function get(url: string) {
         const result = await axios.get(url);
         return result;
     } catch (error) {
-        const { status } = error.response;
-
-        return status;
+        return error.response;
     }
 }
 
