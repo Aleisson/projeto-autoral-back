@@ -24,7 +24,6 @@ module.exports = {
         "semi-spacing": ["error", { before: false, after: true }],
         "object-curly-spacing": ["error", "always"],
         "key-spacing": ["error", { beforeColon: false }],
-        "padded-blocks": ["error", "never"],
         "no-multiple-empty-lines": ["error", { max: 3 }],
         "lines-between-class-members": ["error", "always", { exceptAfterSingleLine: true }],
     },
