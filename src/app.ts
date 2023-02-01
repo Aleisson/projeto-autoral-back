@@ -4,22 +4,15 @@ import cors from "cors";
 import deputadosRoutes from "@/routes/deputados.routes";
 
 dotenv.config();
-// eslint-disable-next-line no-console
-console.log();
-const server = express();
 
-server.use(json());
-server.use(cors());
-server.use(deputadosRoutes);
+const app = express();
 
-server.get("/health", (_req, res) => {
+app.use(json());
+app.use(cors());
+app.use(deputadosRoutes);
+
+app.get("/health", (_req, res) => {
     res.send("OK");
 });
 
-
-server.listen(process.env.PORT, () => {
-    // eslint-disable-next-line no-console
-    console.log(`Server running on port ${process.env.PORT}`);
-});
-
-export default server;
+export default app;
