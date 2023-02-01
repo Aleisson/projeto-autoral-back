@@ -1,4 +1,4 @@
-import { STATUS_CODE } from "../enums/statusCode.enum";
+import { STATUS_CODE } from "../enums/statusCode.enums";
 import { deputadosList } from "../protocols/deputados.protocols";
 import { request } from "../utils/request.utils";
 

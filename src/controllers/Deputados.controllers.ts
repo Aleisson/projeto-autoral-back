@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { STATUS_CODE } from "@/enums/statusCode.enum";
+import { STATUS_CODE } from "@/enums/statusCode.enums";
 import { URLS_CAMARA } from "@/enums/urlsCamara.enums";
 import { requestDeputados } from "@/services/deputados.sevices";
 import { deputadosList } from "@/protocols/deputados.protocols";
