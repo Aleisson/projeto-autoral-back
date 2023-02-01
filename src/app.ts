@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import deputadosRoutes from "./routes/deputados.Routes.js";
+import deputadosRoutes from "./routes/deputados.routes.js";
 
 dotenv.config();
 
@@ -20,5 +20,3 @@ server.listen(process.env.PORT, () => {
     // eslint-disable-next-line no-console
     console.log(`Server running on port ${process.env.PORT}`);
 });
-
-export default server;
