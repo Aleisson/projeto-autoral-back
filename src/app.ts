@@ -2,7 +2,7 @@ import express, { json } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import deputadosRoutes from "./routes/deputados.Routes.js";
-
+console.log();
 dotenv.config();
 
 const server = express();
