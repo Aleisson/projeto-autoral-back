@@ -1,8 +1,8 @@
 import { Router } from "express";
-import * as controllers from "../controllers/Deputados.controllers.js";
+import * as controllers from "@/controllers/Deputados.controllers";
 
-const deputadosRouter = Router();
+const router = Router();
 
-deputadosRouter.get("/deputados", controllers.getDeputados);
+router.get("/deputados", controllers.getDeputados);
 
-export default deputadosRouter;
+export default router;

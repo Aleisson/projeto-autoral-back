@@ -1,5 +1,5 @@
 import supertest from "supertest";
-import server from "../../src/app.js";
+import server from "@/app";
 
 
 const api = supertest(server);
@@ -8,6 +8,6 @@ describe("Testando api", () => {
     it("Testando GET: /deputados", async () => {
         const response = await api.get("/deputados");
 
-        console.log(response);
+        expect(response.status).toBe(404);
     });
 });

@@ -1,6 +1,6 @@
-import { STATUS_CODE } from "../enums/statusCode.Enum.js";
-import { deputadosList } from "../protocols/deputados.Protocols.js";
-import { request } from "../utils/request.js";
+import { STATUS_CODE } from "../enums/statusCode.enum";
+import { deputadosList } from "../protocols/deputados.protocols";
+import { request } from "../utils/request.utils";
 
 
 async function requestDeputados(url: string): Promise<deputadosList[]> {
