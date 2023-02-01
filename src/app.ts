@@ -1,10 +1,11 @@
 import express, { json } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import deputadosRoutes from "./routes/deputados.Routes.js";
-console.log();
-dotenv.config();
+import deputadosRoutes from "@/routes/deputados.routes";
 
+dotenv.config();
+// eslint-disable-next-line no-console
+console.log();
 const server = express();
 
 server.use(json());

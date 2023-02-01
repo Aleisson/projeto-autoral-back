@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { STATUS_CODE } from "../enums/statusCode.enum.js";
-import { URLS_CAMARA } from "../enums/urlsCamara.enums.js";
-import { requestDeputados } from "../services/deputados.sevices.js";
-import { deputadosList } from "../protocols/deputados.protocols.js";
+import { STATUS_CODE } from "@/enums/statusCode.enum";
+import { URLS_CAMARA } from "@/enums/urlsCamara.enums";
+import { requestDeputados } from "@/services/deputados.sevices";
+import { deputadosList } from "@/protocols/deputados.protocols";
 
 async function getDeputados(_req: Request, res: Response) {
 
