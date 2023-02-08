@@ -1,7 +1,7 @@
 {
   "name": "projeto-autoral",
   "version": "1.0.0",
-  "description": "",
+  "description": "Esse projeto autoral com objetivo de ser um portofólio",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts"
