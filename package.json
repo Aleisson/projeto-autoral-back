@@ -4,6 +4,7 @@
   "description": "Esse projeto autoral com objetivo de ser um portofólio",
   "main": "index.js",
   "scripts": {
+    "build": "ttsc -p tsconfig.build.json",
     "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts"
   },
   "keywords": [],
