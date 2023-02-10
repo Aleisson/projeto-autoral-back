@@ -6,9 +6,19 @@
   "scripts": {
     "build": "ttsc --project tsconfig.build.json",
     "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts"
+    "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
+    "test": "jest --passWithNoTests --runInBand",
+    "test:watch": "jest --watch --passWithNoTests --runInBand"
   },
-  "keywords": [],
+  "keywords": [
+    "Accountability",
+    "Tecnologias cívicas",
+    "Gestão Pública",
+    "Dados Abertos",
+    "back-end",
+    "typescript",
+    "nodejs"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
