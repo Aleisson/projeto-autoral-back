@@ -9,5 +9,6 @@ describe("Testando api", () => {
         const response = await api.get("/deputados");
 
         expect(response.status).toBe(200);
+        expect([response.body].length).toBeGreaterThan(0);
     });
 });
