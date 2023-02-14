@@ -1,13 +1,13 @@
-type deputadosList = {
+type deputado = {
     id: number,
-    uri: string,
+    idDeputado: number,
+    uriPartido: string,
     nome: string,
     siglaPartido: string,
-    uriPartido: string,
     siglaUf: string,
     idLegislatura: number,
-    urlFoto: string,
+    fotoDeputado: string,
     email?: string,
 }
 
-export { deputadosList };
+export { deputado };

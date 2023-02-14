@@ -1,14 +1,9 @@
-import { STATUS_CODE } from "../enums/statusCode.enums";
-import { deputadosList } from "../protocols/deputados.protocols";
-import { request } from "../utils/request.utils";
+import { findDeputados } from "@/repositories/deputados.repositories";
+import { deputados } from "@prisma/client";
 
 
-async function requestDeputados(url: string): Promise<deputadosList[]> {
-    const result = await request.get(url);
-    if (result?.status === STATUS_CODE.OK) {
-        return result.data.dados;
-    }
-    return [];
+async function requestDeputados(): Promise<deputados[]> {
+    return await findDeputados();
 }
 
 export { requestDeputados };
