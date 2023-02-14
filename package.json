@@ -6,7 +6,11 @@
   "scripts": {
     "build": "ttsc --project tsconfig.build.json",
     "start": "node dist/server.js",
+    "migration:run": "npx prisma migrate deploy",
+    "seed": "npx prisma db seed",
     "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
+    "dev:migration:run": "npx prisma migrate deploy",
+    "dev:migration:generate": "npx prisma migrate dev",
     "test": "jest --passWithNoTests --runInBand",
     "test:watch": "jest --watch --passWithNoTests --runInBand"
   },
