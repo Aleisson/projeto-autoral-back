@@ -12,7 +12,7 @@
     "dev:migration:run": "npx prisma migrate deploy",
     "dev:migration:generate": "npx prisma migrate dev",
     "test": "jest --passWithNoTests --runInBand",
-    "test:watch": "jest --watch --passWithNoTests --runInBand"
+    "test:watch": "jest --watchAll --passWithNoTests --runInBand"
   },
   "keywords": [
     "Accountability",
