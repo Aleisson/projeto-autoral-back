@@ -18,13 +18,13 @@ async function getDeputados(_req: Request, res: Response) {
 async function getPerfilDeputado(req: Request, res: Response) {
 
     const { id } = req.params;
-
     if (!parseInt(id)) {
-        return res.sendStatus(STATUS_CODE.BAD_REQUEST)
+        return res.sendStatus(STATUS_CODE.BAD_REQUEST);
     }
     const request = await services.requestPerfilDeputado(parseInt(id));
     return res.status(501).send({ test: request });
 }
+
 
 export {
     getDeputados,
