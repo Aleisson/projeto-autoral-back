@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-async function get(url: string) {
+async function getUrl(url: string) {
     try {
         const result = await axios.get(url);
         return result;
@@ -10,6 +10,6 @@ async function get(url: string) {
     }
 }
 
-export const request = {
-    get,
+export {
+    getUrl,
 };

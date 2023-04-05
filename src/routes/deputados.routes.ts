@@ -5,9 +5,6 @@ const router = Router();
 
 router.get("/deputados", controllers.getDeputados);
 
-router.get("/perfil-deputado/:id", (req, res) => {
-    const { id } = req.params;
-    res.status(501).send({test: id});
-})
+router.get("/perfil-deputado/:id", controllers.getPerfilDeputado);
 
 export default router;

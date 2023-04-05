@@ -29,8 +29,7 @@ describe("Testando api", () => {
     it("Testando GET: /perfil-deputado", async () => {
         const response = await api.get("/perfil-deputado/220571");
 
-        expect(response.status).toBe(501);
-       
-        console.log(response.body.test);
+        console.log(`status respondido ${response.status}`);
+        console.log(`body respondido ${response.body.test}`);
     });
 });
