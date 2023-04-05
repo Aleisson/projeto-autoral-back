@@ -26,6 +26,6 @@ npm run migration:run
 6. Seed db
 
 ```bash
-npm run dev:seed
+npm run seed
 ```
 
