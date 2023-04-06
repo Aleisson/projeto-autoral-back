@@ -7,9 +7,9 @@ const STATUS_CODE = Object.freeze({
     UNAUTHORIZED: 401,
     CONFLICT: 409,
     SERVER_ERROR: 500,
-    NOT_IMPLEMENTED: 501
-
-
+    NOT_IMPLEMENTED: 501,
+    SERVICE_UNAVAILABLE: 503
+    
 });
 
 export { STATUS_CODE };

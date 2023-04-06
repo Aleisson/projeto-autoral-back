@@ -25,7 +25,7 @@ async function getPerfilDeputado(req: Request, res: Response) {
     const respost: perfilDeputado = await services.requestPerfilDeputado(parseInt(id));
 
     if (respost === null) {
-        return res.sendStatus(STATUS_CODE.NOT_FOUND);
+        return res.sendStatus(STATUS_CODE.SERVICE_UNAVAILABLE);
     }
 
     return res.status(STATUS_CODE.OK).send({ test: respost });
