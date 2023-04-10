@@ -30,6 +30,6 @@ describe("Testando api", () => {
         const response = await api.get("/perfil-deputado/220571");
 
         console.log(`status respondido ${response.status}`);
-        console.log(`body respondido ${response.body.test}`);
+        console.log(`body respondido ${response.body.repost}`);
     });
 });
