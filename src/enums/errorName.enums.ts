@@ -1,0 +1,9 @@
+const ERROR_NAME = Object.freeze({
+
+    NOT_CONNECT: "NOTCONNECT",
+    NOT_FOUND: "NOTFOUND",
+    NOT_FOUND_ID_DEPUTADOS: "NOTFOUNDIDDEPUTADOS",
+
+});
+
+export { ERROR_NAME };

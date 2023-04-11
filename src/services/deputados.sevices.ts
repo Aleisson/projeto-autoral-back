@@ -1,28 +1,33 @@
 import { deputados } from "@prisma/client";
-import { getUrl } from "@/utils/request.utils"
+import { getUrl } from "@/utils/request.utils";
 import * as deputadosRepository from "@/repositories/deputados.repositories";
 import { URLS_CAMARA } from "@/enums/urlsCamara.enums";
-import { ERROR_MSG } from "@/enums/errorMsg.enums";
+import { ERROR_NAME } from "@/enums/errorName.enums";
 import { perfilDeputado } from "@/protocols/deputados.protocols";
+import { notFoundError } from "@/errors/commom.errors";
+import { notFoundIdDeputadosError } from "@/errors/deputados.errors";
 
 async function requestDeputados(): Promise<deputados[]> {
 
-    return await deputadosRepository.findDeputados();
+    const deputados = await deputadosRepository.findDeputados();
+
+    if (!deputados) {
+        throw notFoundError();
+    }
+
+    return deputados;
 }
 
 async function requestPerfilDeputado(idDeputado: number): Promise<perfilDeputado | string> {
 
 
     const validId = await deputadosRepository.findIdDeputado(idDeputado);
-    
+
     if (!validId) {
-        return ERROR_MSG.NOT_FIND;
+        throw notFoundIdDeputadosError(idDeputado);
     }
 
     const request = await getUrl(URLS_CAMARA.DEPUTADOS + idDeputado);
-    if (!request?.data) {
-        return ERROR_MSG.NOT_CONNECT;
-    }
 
     return request.data as perfilDeputado;
 
